@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body {
+    height: 100%;
+    width: 100%;
+}
+
+.wrapper {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    height: 47vh;
+    width: 95%;
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+}
+
+.box {
+    height: 100%;
+    width: 15%;
+    background-color: white;
+    background-image: url(anime-girl-with-blue-flowers-her-hair-holding-flower-generative-ai_1034062-73338.avif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: brightness(.3);
+    transition: .3s;
+}
+
+.box:hover{
+    filter: brightness(1);
+    transform: translateZ(200px);
+}
+
+.box:hover + *{
+    filter: brightness(.7);
+    transform: translateZ(150px) rotateY(40deg);
+}
+
+.box:hover + * + *{
+    filter: brightness(.4);
+    transform: translateZ(75px) rotateY(20deg);
+}
+
+.box:has(+ *:hover){
+    filter: brightness(.7);
+    transform: translateZ(150px) rotateY(-40deg);
+}
+
+.box:has(+ * + *:hover){
+    filter: brightness(.4);
+    transform: translateZ(75px) rotateY(-20deg);
+}
+
+.box1 {
+    background-image: url(full-shot-ninja-wearing-equipment_23-2150961098.avif);
+}
+
+.box2 {
+    background-image: url(girl-with-backpack-sunset-generative-al_169016-28612.avif);
+}
+
+.box3 {
+    background-image: url(young-man-anime-style-character-vector-illustration-design-manga-anime-boy_147933-2219.avif);
+}
+
+.box4 {
+    background-image: url(illustration-anime-character-rain_23-2151394665.avif);
+}
+
+.box5 {
+    background-image: url(/mythical-dragon-beast-anime-style.jpg);
+}
